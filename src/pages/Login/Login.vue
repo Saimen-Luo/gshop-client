@@ -45,7 +45,7 @@
                 <input type="text" maxlength="11" placeholder="验证码" v-model="captcha">
                 <img
                   class="get_verification"
-                  src="http://vue.learningpurpose.ml:8880/captcha"
+                  src="http://vue.learningpurpose.ml/api/captcha"
                   alt="captcha"
                   @click="getCaptcha"
                   ref="captcha"
@@ -183,7 +183,7 @@ export default {
     // 重新获取图片验证码
     getCaptcha() {
       this.$refs.captcha.src =
-        "http://vue.learningpurpose.ml:8880/captcha?time=" + Date.now();
+        "http://vue.learningpurpose.ml/api/captcha?time=" + Date.now();
     }
   },
   components: {
